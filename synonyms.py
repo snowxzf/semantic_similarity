@@ -1,8 +1,3 @@
-'''Semantic Similarity: starter code
-
-Author: Michael Guerzhoy. Last modified: Nov. 20, 2023.
-'''
-
 import math
 import re
 
@@ -156,8 +151,7 @@ returned).'''
     print("max word:", same_word[0])
     return same_word[0]
 
-#some_texts = build_semantic_descriptors_from_files(["war_and_peace.txt", "swan_lake.txt", "prideandprejcopy.txt", "picdoriangray.txt", "acotar.txt", "1984.txt", "crimeandpun.txt", "frank.txt", "fourthwing.txt", "beemovie.txt", "hamlet.txt"])
-#some_texts = build_semantic_descriptors_from_files(["war_and_peace.txt"])
+some_texts = build_semantic_descriptors_from_files(["war_and_peace.txt", "swan_lake.txt", "prideandprejcopy.txt", "picdoriangray.txt", "acotar.txt", "1984.txt", "crimeandpun.txt", "frank.txt", "fourthwing.txt", "beemovie.txt", "hamlet.txt"])
 
 def run_similarity_test(filename, semantic_descriptors, similarity_fn):
 
@@ -180,5 +174,3 @@ def run_similarity_test(filename, semantic_descriptors, similarity_fn):
             num+=1
     denom = len(split_ans)
     return (num/denom)*100
-# test_case={'this': {'is': 4, 'file': 3, 'one': 1, 'two': 1, 'three': 1, 'the': 1, 'third': 1, 'sentence': 1}, 'is': {'this': 4, 'file': 3, 'one': 1, 'two': 1, 'three': 1, 'the': 1, 'third': 1, 'sentence': 1}, 'file': {'this': 3, 'is': 3, 'one': 1, 'two': 2, 'has': 2, 'sentences': 2, 'three': 2}, 'one': {'this': 1, 'is': 1, 'file': 1}, 'two': {'this': 1, 'is': 1, 'file': 2, 'has': 1, 'sentences': 1}, 'has': {'file': 2, 'two': 1, 'sentences': 2, 'three': 1}, 'sentences': {'file': 2, 'two': 1, 'three': 1, 'has': 2}, 'the': {'this': 1, 'is': 1, 'third': 1, 'sentence': 1}, 'third': {'this': 1, 'is': 1, 'the': 1, 'sentence': 1}, 'sentence': {'this': 1, 'is': 1, 'the': 1, 'third': 1}}
-# print(most_similar_word("is",['is', 'one'],test_case, cosine_similarity))
